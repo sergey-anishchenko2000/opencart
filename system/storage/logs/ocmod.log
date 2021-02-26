@@ -1,0 +1,5080 @@
+2021-02-05 19:45:06 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:06:10 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:17:25 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:18:00 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:18:27 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:21:55 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:22:20 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:22:57 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-05 20:55:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-06 5:55:41 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 11:06:56 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 22:27:11 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:07:27 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:11:55 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:12:42 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:47:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 552
+CODE: return $query->row['total'];
+LINE: 658
+LINE: 677
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 578
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:48:35 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:49:01 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 552
+CODE: return $query->row['total'];
+LINE: 658
+LINE: 677
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 578
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:49:35 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:53:22 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:53:38 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:54:26 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:55:18 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:55:27 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:55:46 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:55:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:56:55 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-09 23:57:02 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:00:43 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:00:52 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:01:35 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 526
+CODE: return $query->row['total'];
+LINE: 632
+LINE: 651
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 552
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:02:08 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:02:29 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:02:49 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:06:37 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:12:37 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:21:46 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:50:25 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:52:56 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:54:04 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:54:11 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:54:39 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 0:56:50 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 9:25:44 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 14:28:09 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-10 14:29:12 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 96
+CODE: foreach ($results as $result) {
+LINE: 142
+LINE: 169
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 140
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 174
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 230
+CODE: $data['products'] = array();
+LINE: 264
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 283
+CODE: $data['limits'] = array();
+LINE: 426
+CODE: $pagination = new Pagination();
+LINE: 465
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 207
+LINE: 257
+LINE: 270
+LINE: 286
+LINE: 304
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 553
+CODE: return $query->row['total'];
+LINE: 659
+LINE: 678
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 579
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-19 20:16:52 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 97
+CODE: foreach ($results as $result) {
+LINE: 143
+LINE: 173
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 141
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 178
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 231
+CODE: $data['products'] = array();
+LINE: 265
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 287
+CODE: $data['limits'] = array();
+LINE: 430
+CODE: $pagination = new Pagination();
+LINE: 469
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 214
+LINE: 264
+LINE: 277
+LINE: 293
+LINE: 311
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 560
+CODE: return $query->row['total'];
+LINE: 666
+LINE: 685
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 586
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
+2021-02-19 20:23:32 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Revslider Modifications
+
+FILE: admin/controller/common/column_left.php
+CODE: return $this->load->view('common/column_left', $data);
+LINE: 745
+
+FILE: admin/view/template/common/header.twig
+CODE: jquery-2.1.1.min.js"></script>
+LINE: 17
+----------------------------------------------------------------
+MOD: Sainent Opencart 3.x SEO Url Issue Fix
+
+FILE: catalog/controller/startup/seo_url.php
+CODE: } elseif ($key == 'path') {
+LINE: 96
+CODE: $marketplace = array();
+LINE: 142
+
+FILE: admin/language/en-gb/common/column_left.php
+CODE: $_['text_layout']
+LINE: 31
+----------------------------------------------------------------
+MOD: Show All Products On One Page By Henry
+
+FILE: admin/controller/catalog/category.php
+CODE: public function index() {
+LINE: 4
+
+FILE: catalog/controller/product/category.php
+CODE: $data['heading_title'] = $category_info['name'];
+LINE: 97
+CODE: foreach ($results as $result) {
+LINE: 143
+LINE: 173
+CODE: $results = $this->model_catalog_category->getCategories($category_id);
+LINE: 141
+CODE: $results = $this->model_catalog_product->getProducts($filter_data);
+LINE: 178
+----------------------------------------------------------------
+MOD: SmartiApps Price Slider
+CODE: $this->load->model('tool/image');
+LINE: 59
+CODE: $data['breadcrumbs'] = array();
+LINE: 111
+CODE: $path = '';
+LINE: 147
+CODE: $data['categories'] = array();
+LINE: 231
+CODE: $data['products'] = array();
+LINE: 265
+CODE: $product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+LINE: 287
+CODE: $data['limits'] = array();
+LINE: 430
+CODE: $pagination = new Pagination();
+LINE: 469
+
+FILE: catalog/model/catalog/product.php
+CODE: return array(
+LINE: 10
+CODE: 'viewed'           => $query->row['viewed']
+LINE: 56
+CODE: $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+LINE: 214
+LINE: 264
+LINE: 277
+LINE: 293
+LINE: 311
+CODE: $sql = "SELECT COUNT(DISTINCT p.product_id) AS total";
+LINE: 560
+CODE: return $query->row['total'];
+LINE: 666
+LINE: 685
+CODE: $sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+LINE: 82
+LINE: 586
+CODE: public function updateViewed($product_id)
+LINE: 32
+----------------------------------------------------------------
+MOD: 简体中文语言包(适合OpenCart 3.0.3.6)
+----------------------------------------------------------------
