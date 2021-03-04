@@ -93,6 +93,22 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);
 			}
+
+			if ($this->user->hasPermission('access', 'catalog/distributor_location')) {
+				$catalog[] = array(
+					'name'	   => $this->language->get('text_distributor_location'),
+					'href'     => $this->url->link('catalog/distributor_location', 'user_token=' . $this->session->data['user_token'], true),
+					'children' => array()		
+				);
+			}
+
+			if ($this->user->hasPermission('access', 'catalog/distributors')) {
+				$catalog[] = array(
+					'name'	   => $this->language->get('text_distributors'),
+					'href'     => $this->url->link('catalog/distributors', 'user_token=' . $this->session->data['user_token'], true),
+					'children' => array()		
+				);
+			}
 			
 			if ($this->user->hasPermission('access', 'catalog/download')) {
 				$catalog[] = array(

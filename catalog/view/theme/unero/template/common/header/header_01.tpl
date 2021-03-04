@@ -237,7 +237,7 @@
 			</div>
 			<div class="distributors">
 				<a href="index.php?route=information/distributors">
-				<img src="image/catalog/cart.png" />
+				<img src="image/catalog/distributors.png" />
 				<span>MAIN DISTRIBUTORS FINDER</span></a>
 			</div>
 		</div>

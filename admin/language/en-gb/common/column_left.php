@@ -37,6 +37,9 @@ $_['text_maintenance']          = 'Maintenance';
 $_['text_menu']                 = 'Menu Manager';
 $_['text_modification']         = 'Modifications';
 $_['text_manufacturer']         = 'Manufacturers';
+$_['text_distributor_location']         = 'Distributors location';
+$_['text_distributors']         = 'Main Distributors Finder';
+
 $_['text_navigation']           = 'Navigation';
 $_['text_option']               = 'Options';
 $_['text_order']                = 'Orders';
