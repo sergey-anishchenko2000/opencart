@@ -4,54 +4,68 @@ $config = $registry->get('config');
 include('catalog/view/theme/' . $config->get('theme_' . $config->get('config_theme') . '_directory') . '/template/new_elements/wrapper_top.tpl'); ?>
 
 <div class="contact-page">
-          <div class="contact-form">
-          <div id="messages_product_view"></div>
-          <form action="<?php echo $action; ?>" id="contactForm" method="post" enctype="multipart/form-data">
-               <div class="fieldset">
-                    <h2 class="legend"><?php echo $text_contact; ?></h2>
-                    <ul class="form-list">
-                         <li class="fields">
-                              <div class="field">
-                                   <div class="input-box">
-                                        <input name="name" id="name" title="Name" value="<?php echo $name; ?>" class="input-text required-entry" type="text" placeholder="<?php echo $entry_name; ?>">
-                                        
-                                        <?php if ($error_name) { ?>
-                                        <div class="text-danger"><?php echo $error_name; ?></div>
-                                        <?php } ?>
-                                   </div>
-                              </div>
-                              
-                              <div class="field">
-                                   <div class="input-box">
-                                        <input name="email" id="email" title="Email" value="<?php echo $email; ?>" class="input-text required-entry validate-email" type="text" placeholder="<?php echo $entry_email; ?>">
-                                        
-                                        <?php if ($error_email) { ?>
-                                        <div class="text-danger"><?php echo $error_email; ?></div>
-                                        <?php } ?>
-                                   </div>
-                              </div>
-                         </li>
-                         <li class="wide"><div class="input-box"><textarea name="enquiry" id="comment" title="<?php echo $entry_enquiry; ?>" class="required-entry input-text" rows="5" placeholder="<?php echo $entry_enquiry; ?>"><?php echo $enquiry; ?></textarea>
-                              <?php if ($error_enquiry) { ?>
-                              <div class="text-danger"><?php echo $error_enquiry; ?></div>
-                              <?php } ?>
-                         </div></li>
-                         <li class="wide"><div class="input-box"><label name="evaluation" class="required-entry input-text" rows="5" >THANK YOU FOR YOUR INQUIRY. WE WILL RESPOND AS SOON AS
-POSSIBLE GENERALLY WITHIN A FEW HOURS.</label>
-                         </div></li>
-                    </ul>
-               </div>
-               
-               <div class="buttons-set">
-                    <button type="submit" title="Send Message" class="button"><span><span><?php echo $button_submit; ?></span></span></button>
-               </div>
-          </form>  
-     </div>
-     
-     <?php if ($geocode) { ?>
-     <div class="contact-map"><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="1170" height="470" src="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"></iframe></div>
-     <?php } ?>
+    <div class="contact-form">
+		<form id="finderForm" method="post" enctype="multipart/form-data">
+			<div class="col-sm-12">
+				<select name="distribution_location_id" class="form-control">
+				<option value="0"><?php echo $text_location; ?></option>
+				<?php foreach ($locations as $location) { ?>
+				
+				<?php if ($location['location_id'] == $distribution_location_id) { ?>
+				<option value="<?php echo $location['location_id']; ?>" selected="selected"><?php echo $location['location_name']; ?></option>
+				<?php } else { ?>
+				<option value="<?php echo $location['location_id']; ?>"><?php echo $location['location_name']; ?></option>
+				<?php } ?>
+				<?php } ?>
+				</select>
+			</div>
+			<div class="col-sm-12 text-center">
+				<input type="button" value="<?php echo $button_search; ?>" id="button-search" class="btn btn-primary" style="margin-top: 30px" />
+			</div>
+			<div style="margin-top:80px; border-bottom: 1px solid #e1e1e1"> </div>
+			<div class="col-sm-12" style="margin-top: 30px;">
+				<?php foreach ($locations as $location) { ?>
+				<?php if ($location['location_id'] == $distribution_location_id) { ?>
+				<p>
+					<label class="checkbox-inline" style="padding-left:0px;">
+						<?php echo "1-".$finder_count . " ". $finder_count . " results for " . $location['location_name'] ?>
+					</label>
+				</p>
+				<div class="row" style="padding-top:20px;">
+				<?php foreach ($finders as $finder) { ?>
+					<div class="col-sm-6 col-xs-12"> 
+						<div class="row">
+							<div class="col-sm-3 col-xs-12">
+								<img src="<?php echo $finder['profile_image']?>" alt="<?php echo $finder['name']?>"/>
+							</div>
+							<div class="col-sm-9 col-xs-12" style="line-height:1.1">
+								<p class="intro_content" style="padding-bottom:0px !important;"> <?php echo $finder['name'] ?> </p>
+								<p> <?php echo $finder['level'] ?> </p>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+				</div>
+				<?php } ?>
+				<?php } ?>
+
+			</div>
+
+		</form>
+    </div>
 </div>
-  
+<script type="text/javascript"><!--
+$('select[name=\'distribution_location_id\']').trigger('change');
+$('#button-search').bind('click', function() {
+	url = 'index.php?route=information/distributors';
+
+	var distribution_location_id = $('#content select[name=\'distribution_location_id\']').attr('value');
+	
+	if (distribution_location_id > 0) {
+		url += '&distribution_location_id=' + encodeURIComponent(distribution_location_id);
+	}
+	location = url;
+});
+//--></script> 
 <?php include('catalog/view/theme/' . $config->get('theme_' . $config->get('config_theme') . '_directory') . '/template/new_elements/wrapper_bottom.tpl'); ?>
 <?php echo $footer; ?>

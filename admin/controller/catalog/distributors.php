@@ -174,9 +174,9 @@ class ControllerCatalogDistributors extends Controller {
 
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['profile_image'])) {
-				$image = $this->model_tool_image->resize($result['profile_image'], 40, 40);
+				$image = $this->model_tool_image->resize($result['profile_image'], 100, 100);
 			} else {
-				$image = $this->model_tool_image->resize('no_image.png', 40, 40);
+				$image = $this->model_tool_image->resize('no_image.png', 100, 100);
 			}
 
 			$data['finders'][] = array(

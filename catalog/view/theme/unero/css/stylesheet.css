@@ -6517,7 +6517,7 @@ ul.blog-list-default {
   line-height:20px;
   display:none;
 }
-.contact-page .contact-form { padding:50px 0;}
+.contact-page .contact-form { padding:0px 0;}
 .contact-page .contact-map {
   overflow:hidden;
   padding:50px 0;
@@ -6528,6 +6528,11 @@ ul.blog-list-default {
   max-width:720px;
   margin:0 auto;
 }
+#finderForm {
+	max-width:950px;
+	margin:0 auto;
+  }
+
 #contactForm h2.legend {
   font-size:30px;
   text-align:center;
@@ -9562,6 +9567,7 @@ body[class*="product-product-"].home-metro .header-type-3 + #un-header-minimized
 	font-size: 2.4rem !important;
 	font-family:Libre Baskerville;
 }
+
 .intro_content1 {
 	padding-top: 20px !important;
 	padding-bottom: 20px !important;
